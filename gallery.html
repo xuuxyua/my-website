@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>美食展示</title>
+    <link rel="stylesheet" href="gallery.css">
+</head>
+<body>
+    <div class="image-slider">
+        <div class="slides">
+            <div class="slide">
+                <img src="food1.jpg" alt="美食1">
+            </div>
+            <div class="slide">
+                <img src="food2.jpg" alt="美食2">
+            </div>
+            <div class="slide">
+                <img src="food3.jpg" alt="美食3">
+            </div>
+            <!-- 更多圖片 -->
+        </div>
+        <button class="prev" onclick="moveSlide(-1)">❮</button>
+        <button class="next" onclick="moveSlide(1)">❯</button>
+    </div>
+
+    <script src="gallery.js"></script>
+</body>
+</html>
