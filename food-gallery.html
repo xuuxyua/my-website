@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>美食展示頁</title>
+    <link rel="stylesheet" href="gallery.css">
+</head>
+<body style="background-color: #f0f0f0; font-family: Arial, sans-serif;">
+    <div class="image-slider">
+        <div class="slides">
+            <div class="slide">
+                <img src="https://via.placeholder.com/600x400.png?text=Food+1" alt="美食1">
+            </div>
+            <div class="slide">
+                <img src="https://via.placeholder.com/600x400.png?text=Food+2" alt="美食2">
+            </div>
+            <div class="slide">
+                <img src="https://via.placeholder.com/600x400.png?text=Food+3" alt="美食3">
+            </div>
+        </div>
+        <button class="prev" onclick="moveSlide(-1)">❮</button>
+        <button class="next" onclick="moveSlide(1)">❯</button>
+    </div>
+
+    <script>
+        let slideIndex = 0;
+
+        function moveSlide(step) {
+            slideIndex += step;
+            let slides = document.querySelectorAll(".slide");
+            if (slideIndex >= slides.length) slideIndex = 0;
+            if (slideIndex < 0) slideIndex = slides.length - 1;
+            slides.forEach((slide, index) => {
+                slide.style.display = (index === slideIndex) ? "block" : "none";
+            });
+        }
+
+        // 初始化顯示第一張圖片
+        moveSlide(0);
+    </script>
+</body>
+</html>
