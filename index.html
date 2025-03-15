@@ -1,12 +1,27 @@
 <!DOCTYPE html>
-<html lang="zh-TW">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>我的 GitHub 網站</title>
+    <title>登入頁面</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>我的GitHub小網站！</h1>
-    <p>My GitHub Website</p>
+    <div class="login-container">
+        <div class="login-box">
+            <h2>登入</h2>
+            <form action="#" method="POST">
+                <div class="input-group">
+                    <label for="username">帳號</label>
+                    <input type="text" id="username" name="username" placeholder="請輸入帳號" required>
+                </div>
+                <div class="input-group">
+                    <label for="password">密碼</label>
+                    <input type="password" id="password" name="password" placeholder="請輸入密碼" required>
+                </div>
+                <button type="submit" class="login-btn">登入</button>
+            </form>
+        </div>
+    </div>
 </body>
 </html>
