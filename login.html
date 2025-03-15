@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>登入頁面</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body style="background-color: #f0f0f0; font-family: Arial, sans-serif;">
+    <div class="login-container">
+        <h2>登入</h2>
+        <form id="login-form">
+            <input type="text" id="username" placeholder="輸入帳號" required>
+            <input type="password" id="password" placeholder="輸入密碼" required>
+            <button type="submit" id="login-button">登入</button>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById('login-form').addEventListener('submit', function(event) {
+            event.preventDefault(); // 防止表單提交
+            // 假設登入成功後，跳轉到美食頁面
+            window.location.href = "food-gallery.html"; // 跳轉到美食頁面
+        });
+    </script>
+</body>
+</html>
